@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0782FD2D-4A1D-4827-89AD-20236F935BF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Install</RootNamespace>
+    <AssemblyName>Install</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>VISTOP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form\control\CProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="form\control\CProgressBar.Designer.cs">
+      <DependentUpon>CProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainFrm.Designer.cs">
+      <DependentUpon>mainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\AntiAliasGraphics.cs" />
+    <Compile Include="form\BackEventArgs.cs" />
+    <Compile Include="form\control\CButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="form\control\CButton.designer.cs">
+      <DependentUpon>CButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CForm.Designer.cs">
+      <DependentUpon>CForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CMessageBox.cs" />
+    <Compile Include="form\CMessageBoxBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CMessageBoxBase.Designer.cs">
+      <DependentUpon>CMessageBoxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ColorConverterEx.cs" />
+    <Compile Include="form\ControlBoxManager.cs" />
+    <Compile Include="form\ControlPaintEx.cs" />
+    <Compile Include="form\control\CTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="form\control\CTextBox.designer.cs">
+      <DependentUpon>CTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\control\CTextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="form\DialogButton.cs" />
+    <Compile Include="form\Enum.cs" />
+    <Compile Include="form\FormRenderEven.cs" />
+    <Compile Include="form\GrayscaleStyle.cs" />
+    <Compile Include="form\Helper.cs" />
+    <Compile Include="form\HollowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\HollowForm.Designer.cs">
+      <DependentUpon>HollowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\HSL.cs" />
+    <Compile Include="form\mdiClient.cs" />
+    <Compile Include="form\MessageBoxArgs.cs" />
+    <Compile Include="form\RGB.cs" />
+    <Compile Include="form\Share.cs" />
+    <Compile Include="form\SkinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SkinFormColorTable.cs" />
+    <Compile Include="form\SkinMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SkinTools.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System.cs" />
+    <Compile Include="Win32\Com\DOCHOSTUIFLAG.cs" />
+    <Compile Include="Win32\Com\DOCHOSTUIINFO.cs" />
+    <Compile Include="Win32\Com\GInterface0.cs" />
+    <Compile Include="Win32\Com\GInterface1.cs" />
+    <Compile Include="Win32\Com\ICustomDoc.cs" />
+    <Compile Include="Win32\Com\IDocHostUIHandler.cs" />
+    <Compile Include="Win32\Com\IDropTarget.cs" />
+    <Compile Include="Win32\Com\IOleCommandTarget.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceActiveObject.cs" />
+    <Compile Include="Win32\Com\IOleInPlaceFrame.cs" />
+    <Compile Include="Win32\Com\IWebBrowser2.cs" />
+    <Compile Include="Win32\Com\OLECMDEXECOPT.cs" />
+    <Compile Include="Win32\Com\OLECMDF.cs" />
+    <Compile Include="Win32\Com\OLECMDID.cs" />
+    <Compile Include="Win32\Com\tagMSG.cs" />
+    <Compile Include="Win32\Com\tagOLECMD.cs" />
+    <Compile Include="Win32\Com\tagPOINT.cs" />
+    <Compile Include="Win32\Com\tagRECT.cs" />
+    <Compile Include="Win32\Consts.cs" />
+    <Compile Include="Win32\Control\CHARRANGE.cs" />
+    <Compile Include="Win32\Control\CLIPFORMAT.cs" />
+    <Compile Include="Win32\Control\DVASPECT.cs" />
+    <Compile Include="Win32\Control\FORMATETC.cs" />
+    <Compile Include="Win32\Control\GETCLIPBOARDDATAFLAGS.cs" />
+    <Compile Include="Win32\Control\GETOBJECTOPTIONS.cs" />
+    <Compile Include="Win32\Control\IAdviseSink.cs" />
+    <Compile Include="Win32\Control\IDataObject.cs" />
+    <Compile Include="Win32\Control\IEnumFORMATETC.cs" />
+    <Compile Include="Win32\Control\IEnumSTATDATA.cs" />
+    <Compile Include="Win32\Control\IEnumSTATSTG.cs" />
+    <Compile Include="Win32\Control\ILockBytes.cs" />
+    <Compile Include="Win32\Control\IOleClientSite.cs" />
+    <Compile Include="Win32\Control\IOleContainer.cs" />
+    <Compile Include="Win32\Control\IRichEditOle.cs" />
+    <Compile Include="Win32\Control\ISequentialStream.cs" />
+    <Compile Include="Win32\Control\IStorage.cs" />
+    <Compile Include="Win32\Control\IStream.cs" />
+    <Compile Include="Win32\Control\REOBJECT.cs" />
+    <Compile Include="Win32\Control\Result.cs" />
+    <Compile Include="Win32\Control\STATDATA.cs" />
+    <Compile Include="Win32\Control\STGMEDIUM.cs" />
+    <Compile Include="Win32\Control\TYMED.cs" />
+    <Compile Include="Win32\HookProc.cs" />
+    <Compile Include="Win32\NativeMethods.cs" />
+    <Compile Include="Win32\Structs.cs" />
+    <Compile Include="Zip.cs" />
+    <Compile Include="zip\BZip2\BZip2.cs" />
+    <Compile Include="zip\BZip2\BZip2Constants.cs" />
+    <Compile Include="zip\BZip2\BZip2Exception.cs" />
+    <Compile Include="zip\BZip2\BZip2InputStream.cs" />
+    <Compile Include="zip\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="zip\Checksum\Adler32.cs" />
+    <Compile Include="zip\Checksum\BZip2Crc.cs" />
+    <Compile Include="zip\Checksum\Crc32.cs" />
+    <Compile Include="zip\Checksum\IChecksum.cs" />
+    <Compile Include="zip\Core\FileSystemScanner.cs" />
+    <Compile Include="zip\Core\INameTransform.cs" />
+    <Compile Include="zip\Core\IScanFilter.cs" />
+    <Compile Include="zip\Core\NameFilter.cs" />
+    <Compile Include="zip\Core\PathFilter.cs" />
+    <Compile Include="zip\Core\StreamUtils.cs" />
+    <Compile Include="zip\Core\WindowsPathUtils.cs" />
+    <Compile Include="zip\Encryption\PkzipClassic.cs" />
+    <Compile Include="zip\Encryption\ZipAESStream.cs" />
+    <Compile Include="zip\Encryption\ZipAESTransform.cs" />
+    <Compile Include="zip\GZip\GZip.cs" />
+    <Compile Include="zip\GZip\GZipConstants.cs" />
+    <Compile Include="zip\GZip\GZipException.cs" />
+    <Compile Include="zip\GZip\GzipInputStream.cs" />
+    <Compile Include="zip\GZip\GzipOutputStream.cs" />
+    <Compile Include="zip\Lzw\LzwConstants.cs" />
+    <Compile Include="zip\Lzw\LzwException.cs" />
+    <Compile Include="zip\Lzw\LzwInputStream.cs" />
+    <Compile Include="zip\SharpZipBaseException.cs" />
+    <Compile Include="zip\Tar\InvalidHeaderException.cs" />
+    <Compile Include="zip\Tar\TarArchive.cs" />
+    <Compile Include="zip\Tar\TarBuffer.cs" />
+    <Compile Include="zip\Tar\TarEntry.cs" />
+    <Compile Include="zip\Tar\TarException.cs" />
+    <Compile Include="zip\Tar\TarHeader.cs" />
+    <Compile Include="zip\Tar\TarInputStream.cs" />
+    <Compile Include="zip\Tar\TarOutputStream.cs" />
+    <Compile Include="zip\Zip\Compression\Deflater.cs" />
+    <Compile Include="zip\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="zip\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="zip\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="zip\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="zip\Zip\Compression\Inflater.cs" />
+    <Compile Include="zip\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="zip\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="zip\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="zip\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="zip\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="zip\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="zip\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="zip\Zip\FastZip.cs" />
+    <Compile Include="zip\Zip\IEntryFactory.cs" />
+    <Compile Include="zip\Zip\WindowsNameTransform.cs" />
+    <Compile Include="zip\Zip\ZipConstants.cs" />
+    <Compile Include="zip\Zip\ZipEntry.cs" />
+    <Compile Include="zip\Zip\ZipEntryFactory.cs" />
+    <Compile Include="zip\Zip\ZipException.cs" />
+    <Compile Include="zip\Zip\ZipExtraData.cs" />
+    <Compile Include="zip\Zip\ZipFile.cs" />
+    <Compile Include="zip\Zip\ZipHelperStream.cs" />
+    <Compile Include="zip\Zip\ZipInputStream.cs" />
+    <Compile Include="zip\Zip\ZipNameTransform.cs" />
+    <Compile Include="zip\Zip\ZipOutputStream.cs" />
+    <EmbeddedResource Include="mainFrm.resx">
+      <DependentUpon>mainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CMessageBox.resx">
+      <DependentUpon>CMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CMessageBoxBase.resx">
+      <DependentUpon>CMessageBoxBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\control\CTextBox.resx">
+      <DependentUpon>CTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\HollowForm.resx">
+      <DependentUpon>HollowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <EmbeddedResource Include="dyp.zip" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackPalace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg\qqmessagebox_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg\qqmessagebox_infor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg\qqmessagebox_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg\qqmessagebox_question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg\qqmessagebox_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_close_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_close_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_max_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_max_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_mini_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_mini_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_mini_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_out_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_out_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_out_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_restore_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_restore_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btn_restore_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnClose1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnMax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnMax1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnMin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnRestore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SysButton\btnRestore1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\bar.png" />
+    <Content Include="VISTOP.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
